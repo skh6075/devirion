@@ -25,12 +25,8 @@ namespace poggit\virion\devirion;
 use pocketmine\scheduler\AsyncTask;
 
 class RegisterClassLoaderAsyncTask extends AsyncTask{
-	/** @var VirionClassLoader */
-	private $classLoader;
 
-	public function __construct(VirionClassLoader $classLoader){
-		$this->classLoader = $classLoader;
-	}
+	public function __construct(private VirionClassLoader $classLoader){}
 
 	public function onRun() : void{
 		$this->classLoader->register(true);
