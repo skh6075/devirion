@@ -99,7 +99,7 @@ class DEVirion extends PluginBase{
 		if(!isset($data['name'], $data['version'], $data['antigen'], $data['api'])){
 			throw new InvalidArgumentException("Cannot load virion: Required property value not available [Path: $filePath]");
 		}
-		$authors = $data['authors'] ?? [];
+		$authors = (array)($data['authors'] ?? []);
 		if(isset($data['author'])){
 			$authors[] = $data['author'];
 		}
