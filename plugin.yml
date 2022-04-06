@@ -1,6 +1,6 @@
 name: DEVirion
 author: poggit
-authors: [SOFe, skh6075]
+authors: [SOFe]
 main: poggit\virion\devirion\DEVirion
 version: 1.2.6
 api: 4.0.0
